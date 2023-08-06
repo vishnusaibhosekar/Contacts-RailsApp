@@ -92,6 +92,11 @@ li {
     padding: 5px;
 }
 
+.btn-primary-small{
+    /* background-color: #337ab7; */
+    /* color: #fff; */
+}
+
 .btn-secondary {
     background-color: gray;
     color: #fff;

@@ -1,4 +1,8 @@
-<h1>Edit <%= @contact.name %></h1>
-<%= render 'form', contact: @contact %>
-<%= link_to 'Show', contact_path(@contact), class: 'btn btn-primary' %> |
-<%= link_to 'Back to all contacts', contacts_path, class: 'btn btn-primary' %>
+<div style="text-align: center; margin-top: 20px">
+    <h1>Edit <%= @contact.name %></h1>
+    <%= render 'form', contact: @contact %>
+    <div style="text-align: center; max-width: 500px; margin: 0 auto;">
+        <%= link_to 'Show', contact_path(@contact), class: 'btn btn-secondary' %> &nbsp;
+        <%= link_to 'Back to all contacts', contacts_path, class: 'btn btn-primary' %>
+    </div
+</div>

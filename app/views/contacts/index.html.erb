@@ -2,7 +2,12 @@
 <div class="row">
     <% @contacts.each do |contact| %>
         <div class="col-md-4 mb-4">
-        <div class="card">
+        <div class="card text-white bg-dark mb-3">
+            <% if contact.avatar.attached? %>
+                <%= image_tag url_for(contact.avatar), class: 'img' %>
+            <% else %>
+                <%= image_tag 'default-avatar.png', class: 'img' %>
+            <% end %>
             <div class="card-body">
             <h5 class="card-title"><%= contact.name %></h5>
             <p class="card-text"><strong>Email:</strong> <%= contact.email %></p>

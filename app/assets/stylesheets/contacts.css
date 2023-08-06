@@ -91,3 +91,21 @@ li {
 .center {
     text-align: center;
 }
+
+.card {
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+
+/* Image styles */
+.img {
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    object-fit: cover;
+    border:#333 1px solid;
+    border-radius: 50%;
+    background-color: #f8f8f8;
+}

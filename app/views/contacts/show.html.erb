@@ -1,10 +1,13 @@
-<h1><%= @contact.name %></h1>
-<% if @contact.avatar.attached? %>
-    <%= image_tag url_for(@contact.avatar), size:'300x300' %>
-<% end %>
-<p><strong>Email:</strong> <%= @contact.email %></p>
-<p><strong>Phone:</strong> <%= @contact.phone %></p>
-
-<%= link_to 'Edit', edit_contact_path(@contact), class: 'btn btn-primary' %> |
-<%= link_to 'Delete', contact_path(@contact), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %> |
-<%= link_to 'Back to all contacts', contacts_path, class: 'btn btn-primary' %>
+<div style="text-align: center; width: 100%;">
+    <h1><%= @contact.name %></h1>
+    <% if @contact.avatar.attached? %>
+        <%= image_tag url_for(@contact.avatar), size: '300x300' %>
+    <% end %>
+    <p><strong>Email:</strong> <%= @contact.email %></p>
+    <p><strong>Phone:</strong> <%= @contact.phone %></p>
+    <div style="text-align: center; max-width: 500px; margin: 0 auto;">
+        <%= link_to 'Edit', edit_contact_path(@contact), class: 'btn btn-primary', style: 'flex: 1; max-width: 500px;' %> &nbsp;
+        <%= button_to 'Delete', contact_path(@contact), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', style: 'flex: 1; max-width: 500px;' %>
+        <%= link_to 'Back to all contacts', contacts_path, class: 'btn btn-secondary', style: 'flex: 1; max-width: 500px;' %>
+    </div>
+</div>
